@@ -1,54 +1,54 @@
 // make array of my questions.
 var myQuestions = [
     {
-        question: "What is 10/2?",
+        question: "Which Beatle crossed Abbey Roach first?",
         answers: {
-            a: '3',
-            b: '5',
-            c: '115',
-            d: '100'
+            a: 'John',
+            b: 'George',
+            c: 'Ringo',
+            d: 'Paul'
+        },
+        correctAnswer: 'a'
+    },
+    {
+        question: "Which of the following songs contributed to the rumor that Paul had died?",
+        answers: {
+            a: 'Penny Lane',
+            b: 'Hey Jude',
+            c: 'Strawberry Fields Forever',
+            d: 'Yesterday'
+        },
+        correctAnswer: 'c'
+    },
+    {
+        question: "What name did the group go by before they were the Beatles?",
+        answers: {
+            a: 'The Quarrymen',
+            b: 'Johnny and the Moondogs',
+            c: 'The BlackJacks',
+            d: 'All of the above'
+        },
+        correctAnswer: 'd'
+    },
+    {
+        question: "Where were the Beatles originally formed?",
+        answers: {
+            a: 'Manchester',
+            b: 'London',
+            c: 'Hamburg',
+            d: 'Liverpool'
+        },
+        correctAnswer: 'd'
+    },
+    {
+        question: "What was the Beatles first single?",
+        answers: {
+            a: 'Please Please Me',
+            b: 'Love Me Do',
+            c: 'I Saw Her Standing There',
+            d: 'Twist And Shout'
         },
         correctAnswer: 'b'
-    },
-    {
-        question: "What is 30/3?",
-        answers: {
-            a: '3',
-            b: '5',
-            c: '115',
-            d: '100'
-        },
-        correctAnswer: 'c'
-    },
-    {
-        question: "What is 10/2?",
-        answers: {
-            a: '3',
-            b: '5',
-            c: '115',
-            d: '100'
-        },
-        correctAnswer: 'b'
-    },
-    {
-        question: "What is 30/3?",
-        answers: {
-            a: '3',
-            b: '5',
-            c: '115',
-            d: '100'
-        },
-        correctAnswer: 'c'
-    },
-    {
-        question: "What is 30/3?",
-        answers: {
-            a: '3',
-            b: '5',
-            c: '115',
-            d: '100'
-        },
-        correctAnswer: 'c'
     }
 ];
 
@@ -82,7 +82,7 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton) 
                 answers.push(
                     '<label>'
                     + '<input type="radio" name="question' + i + '" value="' + letter + '">'
-                    + letter + ': '
+                    + " " + letter + ': '
                     + questions[i].answers[letter]
                     + '</label>'
                 );
@@ -91,7 +91,7 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton) 
             // add this question and its answers to the output
             output.push(
                 '<div class="question">' + questions[i].question + '</div>'
-                + '<div class="answers">' + answers.join('') + '</div>'
+                + '<div class="answers">' + answers.join('  ') + '</div>'
             );
         }
 
