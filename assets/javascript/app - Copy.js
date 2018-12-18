@@ -1,10 +1,12 @@
+// make array of my questions.
 var myQuestions = [
     {
         question: "What is 10/2?",
         answers: {
             a: '3',
             b: '5',
-            c: '115'
+            c: '115',
+            d: '100'
         },
         correctAnswer: 'b'
     },
@@ -13,11 +15,46 @@ var myQuestions = [
         answers: {
             a: '3',
             b: '5',
-            c: '10'
+            c: '115',
+            d: '100'
+        },
+        correctAnswer: 'c'
+    },
+    {
+        question: "What is 10/2?",
+        answers: {
+            a: '3',
+            b: '5',
+            c: '115',
+            d: '100'
+        },
+        correctAnswer: 'b'
+    },
+    {
+        question: "What is 30/3?",
+        answers: {
+            a: '3',
+            b: '5',
+            c: '115',
+            d: '100'
+        },
+        correctAnswer: 'c'
+    },
+    {
+        question: "What is 30/3?",
+        answers: {
+            a: '3',
+            b: '5',
+            c: '115',
+            d: '100'
         },
         correctAnswer: 'c'
     }
 ];
+
+
+
+// make variables.
 
 var quizContainer = document.getElementById('quiz');
 var resultsContainer = document.getElementById('results');
