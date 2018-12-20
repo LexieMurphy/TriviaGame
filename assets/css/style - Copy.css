@@ -41,6 +41,11 @@ body {
     font-size: 25px;
 }
 
+#timeDisplay {
+    font-size: 120px;
+    margin-top: 60px;
+}
+
 .barBelowInstructions {
     margin-top: auto;
     margin-bottom: 15px;

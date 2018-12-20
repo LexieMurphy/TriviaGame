@@ -1,3 +1,9 @@
+// on load of page set on click for the lets play button.
+window.onload = function () {
+    $("#letsPlay").on("click", letsPlay);
+};
+
+
 // make array of my questions.
 var myQuestions = [
     {
@@ -54,11 +60,68 @@ var myQuestions = [
 
 
 
-// make variables.
+// make my variables.
 
 var quizContainer = document.getElementById('quiz');
 var resultsContainer = document.getElementById('results');
 var submitButton = document.getElementById('submit');
+var intervalId;
+var clockRunning = false;
+var time = 60;
+
+
+// run reset function
+function reset() {
+    time = 60;
+
+    // Change the "display" div to "00:00"
+    $("#timeDisplay").text("00:00");
+
+}
+
+// start the count and set clock to running (counting down).
+function letsPlay() {
+    if(!clockRunning) {
+        intervalID = setInterval(count, 1000);
+        clockRunning = true;
+    }
+}
+
+// stop the clock
+function stop() {
+    clearInterval(intervalId);
+    clockRunning = false;
+}
+
+// increment the time by 1 second and save the results in the variable and in the div.
+function count() {
+    time++;
+    var converted = timeConverted(time);
+    console.log(converted);
+    $("#timeDisplay").text(converted);
+}
+
+// converter function
+function timeConverter(t) {
+
+    var minutes = Math.floor(t / 60);
+    var seconds = t - (minutes * 60);
+  
+    if (seconds < 10) {
+      seconds = "0" + seconds;
+    }
+  
+    if (minutes === 0) {
+      minutes = "00";
+    }
+    else if (minutes < 10) {
+      minutes = "0" + minutes;
+    }
+  
+    return minutes + ":" + seconds;
+  }
+  
+
 
 generateQuiz(myQuestions, quizContainer, resultsContainer, submitButton);
 
