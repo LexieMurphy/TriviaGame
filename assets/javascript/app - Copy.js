@@ -95,8 +95,8 @@ function stop() {
 
 // increment the time by 1 second and save the results in the variable and in the div.
 function count() {
-    time++;
-    var converted = timeConverted(time);
+    time--;
+    var converted = timeConverter(time);
     console.log(converted);
     $("#timeDisplay").text(converted);
 }
