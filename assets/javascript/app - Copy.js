@@ -1,7 +1,7 @@
 // make array of my questions.
 var myQuestions = [
     {
-        question: "Which Beatle crossed Abbey Roach first?",
+        question: "Which Beatle crossed Abbey Road first?",
         answers: {
             a: 'John',
             b: 'George',

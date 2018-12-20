@@ -1,5 +1,6 @@
 h1 {
     color:red;
+    font-size: 30px;
 }
 
 h5 {
@@ -29,6 +30,12 @@ body {
 }
 
 .instructionHeader {
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-size: 25px;
+}
+
+.timerHeader {
     margin-bottom: 10px;
     margin-top: 10px;
     font-size: 25px;
