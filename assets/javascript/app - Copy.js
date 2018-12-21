@@ -73,16 +73,19 @@ var time = 60;
 // run reset function
 function reset() {
     time = 60;
+    generateQuiz(myQuestions, quizContainer, resultsContainer, submitButton);
+    resultsContainer.innerHTML = "";
 
     // Change the "display" div to "00:00"
-    $("#timeDisplay").text("00:00");
+    $("#timeDisplay").text("01:00");
 
 }
 
 // start the count and set clock to running (counting down).
 function letsPlay() {
     if(!clockRunning) {
-        intervalID = setInterval(count, 1000);
+        reset();
+        intervalId = setInterval(count, 1000);
         clockRunning = true;
     }
 }
@@ -91,6 +94,7 @@ function letsPlay() {
 function stop() {
     clearInterval(intervalId);
     clockRunning = false;
+    console.log("teststop", clockRunning);
 }
 
 // increment the time by 1 second and save the results in the variable and in the div.
@@ -99,6 +103,12 @@ function count() {
     var converted = timeConverter(time);
     console.log(converted);
     $("#timeDisplay").text(converted);
+    console.log(time);
+    if(time < 1) {
+    showResults(questions, quizContainer, resultsContainer);
+    stop();
+    alert("Time is OUT!");
+    }
 }
 
 // converter function
@@ -203,6 +213,7 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton) 
     // on submit, show results
     submitButton.onclick = function () {
         showResults(questions, quizContainer, resultsContainer);
+        stop();
     }
 
 }
