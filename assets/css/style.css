@@ -1,5 +1,6 @@
 h1 {
-    color:rgb(224, 5, 224);
+    color:red;
+    font-size: 30px;
 }
 
 h5 {
@@ -11,15 +12,15 @@ body {
     font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
     line-height: 30px;
     color: #333;
-    background-image: url('file:/Users/Lexie.Murphy/Desktop/unit-4-game/assets/images/qbkls.png');
+    background-image: url('file:/Users/Lexie.Murphy/Desktop/TriviaGame/assets/images/qbkls.png');
   }
 
 .jumbotron {
-    background-color:rgb(4, 4, 78);
+    background-color:black;
     color: white;
     text-align: center;
     width: 1200px;
-    border-color: rgb(224, 5, 224);
+    border-color: red;
     border-width: 5px;
     margin-left: auto;
     margin-right: auto;
@@ -34,21 +35,37 @@ body {
     font-size: 25px;
 }
 
+.timerHeader {
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-size: 25px;
+}
+
+#timeDisplay {
+    font-size: 120px;
+    margin-top: 60px;
+}
+
 .barBelowInstructions {
     margin-top: auto;
     margin-bottom: 15px;
-    border-color: blue;
+    border-color: red;
 }
 
 .btn {
-    background-color:rgb(4, 4, 78);
-    color:rgb(4, 4, 78);
+    background-color:red;
+    color:black;
 }
 
-.row {
-    margin-left: 0px;
-    margin-right: 0px;
+#quiz {
+    background-color: black;
+    width: 1200px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 15px;
+    padding: 15px;
+    color: white;
 }
 
 .quizQuestions {
@@ -58,15 +75,39 @@ body {
     text-align: center;
 }
 
-.card {
-    height: 150px;
-    border-width: 2px;
-    border-color: rgb(4, 4, 78);
+.answers {
+    margin-bottom: 15px;
 }
 
-.card-body {
-    width: 1200px;
+.label {
+    margin-right: 5px;
+    margin-left: 5px;
 }
+
+#submitButtonSection {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+#submit {
+    background-color: green;
+    color: white;
+    font: bold;
+}
+
+#results {
+    width: 500px;
+    color:black;
+    font-size: 50px;
+    font: bold;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    margin-bottom: 15px;
+
 
 #wins-text {
     font-size: 30px;

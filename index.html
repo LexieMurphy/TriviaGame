@@ -6,73 +6,44 @@
     <title>TriviaGame</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <link rel="stylesheet" type="text/css" href=assets/css/style.css> </head> <body>
+    <link rel="stylesheet" type="text/css" href=".\assets\css\style.css">
+</head>
+
+<body>
 
     <div class="jumbotron">
-        <h1 class="gameTitle">Trivia Game!</h1>
-        <p class="instructionHeader">Instructions:</p>
-        <hr class="barBelowInstructions">
-        <p>How much do you know about the Beatles?</p>
-        <p>Answer all of the questions before the time runs out!</p>
-        <a id="letsPlay" class="btn btn-primary btn-lg" role="button">Let's Play!</a>
-    </div>
-
-    <div class="quizQuestions">
+        <h1 class="gameTitle">- The Beatles Trivia Game! -</h1>
         <div class="row">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="computerQuestion">- Question #1 -</h5>
-                    <p id="computerQuestion-text"></p>
+            <div class="col-md-6">
+                <div class="instructions">
+                    <p class="instructionHeader">Instructions:</p>
+                    <hr class="barBelowInstructions">
+                    <p>How much do you know about the Beatles?</p>
+                    <p>Answer all of the questions before the time runs out!</p>
+                    <a id="letsPlay" class="btn btn-primary btn-lg" role="button">Let's Play!</a>
                 </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="computerQuestion">- Question #2 -</h5>
-                    <p id="computerQuestion-text"></p>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="computerQuestion">- Question #3 -</h5>
-                    <p id="computerQuestion-text"></p>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="computerQuestion">- Question #4 -</h5>
-                    <p id="computerQuestion-text"></p>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="computerQuestion">- Question #5 -</h5>
-                    <p id="computerQuestion-text"></p>
+            <div class="col-md-6">
+                <div class="timer">
+                    <p class="timerHeader">Timer:</p>
+                    <hr class="barBelowInstructions">
+                    <div id="timeDisplay">01:00</div>
                 </div>
             </div>
         </div>
     </div>
 
-    <button id = "submit">Get Results</button>
-
-    <div id = "results"></div>
-
-
-    <div id="scoreSection">
-        <p>Put score details here</p>
+    <div id="quiz"></div>
+    <div id="submitButtonSection">
+        <button id="submit">Get Results</button>
     </div>
+    <div id="results"></div>
 
-    <script type="text/javascript" src="./assets/javascript/game.js">
+
+    <script type="text/javascript" src=".\assets\javascript\app.js">
 
     </script>
 
-    </body>
+</body>
 
 </html>
